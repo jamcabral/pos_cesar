@@ -168,4 +168,65 @@ Exemplo de link: [CAR_MOT_CAM](https://app.roboflow.com/dorpaciente/car_mot_cam/
 ## HuggingFace
 
 Nessa seção você deve publicar o link para o HuggingFace
+https://huggingface.co/spaces/Jammesson/rnn_jam/tree/main
+
+
+
+ERRO HUGIE FACE:
+
+Downloading:   0%|          | 0.00/8.46M [00:00<?, ?B/s]
+Downloading: 100%|██████████| 8.46M/8.46M [00:00<00:00, 112MB/s]
+/home/user/.local/lib/python3.8/site-packages/torch/hub.py:267: UserWarning: You are about to download and run code from an untrusted repository. In a future release, this won't be allowed. To add the repository to your trusted list, change the command to {calling_fn}(..., trust_repo=False) and a command prompt will appear asking for an explicit confirmation of trust, or load(..., trust_repo=True), which will assume that the prompt is to be answered with 'yes'. You can also use load(..., trust_repo='check') which will only prompt for confirmation if the repo is not already trusted. This will eventually be the default behaviour
+  warnings.warn(
+Downloading: "https://github.com/ultralytics/yolov5/zipball/master" to /home/user/.cache/torch/hub/master.zip
+YOLOv5 🚀 2022-11-8 Python-3.8.9 torch-1.13.0+cu117 CPU
+
+Fusing layers...
+Model summary: 117 layers, 4170531 parameters, 0 gradients, 10.4 GFLOPs
+WARNING ⚠️ YOLOv5 ClassificationModel is not yet AutoShape compatible. You must pass torch tensors in BCHW to this model, i.e. shape(1,3,224,224).
+/home/user/.local/lib/python3.8/site-packages/gradio/inputs.py:256: UserWarning: Usage of gradio.inputs is deprecated, and will not be supported in the future, please import your component from gradio.components
+  warnings.warn(
+/home/user/.local/lib/python3.8/site-packages/gradio/deprecation.py:40: UserWarning: `optional` parameter is deprecated, and it has no effect
+  warnings.warn(value)
+/home/user/.local/lib/python3.8/site-packages/gradio/outputs.py:42: UserWarning: Usage of gradio.outputs is deprecated, and will not be supported in the future, please import your components from gradio.components
+  warnings.warn(
+/home/user/.local/lib/python3.8/site-packages/gradio/interface.py:330: UserWarning: Currently, only the 'default' theme is supported.
+  warnings.warn("Currently, only the 'default' theme is supported.")
+Caching examples at: '/home/user/app/gradio_cached_examples/13/log.csv'
+Traceback (most recent call last):
+  File "app.py", line 30, in <module>
+    gr.Interface(
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/interface.py", line 649, in __init__
+    self.examples_handler = Examples(
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/examples.py", line 60, in create_examples
+    utils.synchronize_async(examples_obj.create)
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/utils.py", line 359, in synchronize_async
+    return fsspec.asyn.sync(fsspec.asyn.get_loop(), func, *args, **kwargs)
+  File "/home/user/.local/lib/python3.8/site-packages/fsspec/asyn.py", line 96, in sync
+    raise return_result
+  File "/home/user/.local/lib/python3.8/site-packages/fsspec/asyn.py", line 53, in _runner
+    result[0] = await coro
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/examples.py", line 258, in create
+    await self.cache()
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/examples.py", line 292, in cache
+    prediction = await Context.root_block.process_api(
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/blocks.py", line 982, in process_api
+    result = await self.call_function(fn_index, inputs, iterator)
+  File "/home/user/.local/lib/python3.8/site-packages/gradio/blocks.py", line 824, in call_function
+    prediction = await anyio.to_thread.run_sync(
+  File "/home/user/.local/lib/python3.8/site-packages/anyio/to_thread.py", line 31, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/home/user/.local/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/user/.local/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "app.py", line 18, in yolo
+    results = model(im)  # inference
+  File "/home/user/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/user/.cache/torch/hub/ultralytics_yolov5_master/models/common.py", line 508, in forward
+    b, ch, h, w = im.shape  # batch, channel, height, width
+  File "/home/user/.local/lib/python3.8/site-packages/PIL/Image.py", line 517, in __getattr__
+    raise AttributeError(name)
+AttributeError: shape
 ```
